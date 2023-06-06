@@ -8,6 +8,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Pessoas');
+    await queryInterface.removeColumn('Pessoas', 'deletedAt');
   }
 };
